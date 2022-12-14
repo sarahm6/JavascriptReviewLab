@@ -11,7 +11,7 @@ Remind me, what are declare, assign, and define?
     Assign: To give a value to a variable
     Define: Give it a meaning 
 What is pseudocoding and why should you do it?
-    Pseudocoding is a way to write your code in plain English as a method that can be easily followed and understoof. 
+    Pseudocoding is a way to write your code in plain English as a method that can be easily followed and understood. 
 
 */
 
@@ -71,3 +71,71 @@ if (animal=="cow") {
     
 // Commit
 
+// E. Driver's Ed
+// Make a variable that holds a person's age; be semantic
+// Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+var age = 13
+if (age >= 16) {
+    console.log("Here are the keys!");
+} else {
+  console.log("Sorry, you're too young");
+}
+
+// II. Loops
+// A. The basics
+// Write a loop that will print out all the numbers from 0 to 10, inclusive
+for (var i=0; i<= 10; i++ )
+    console.log (i)
+// Write a loop that will print out all the numbers from 10 up to and including 400
+for (var i=10; i<=400; i++)
+  console.log(i)
+// Write a loop that will print out every third number starting with 12 and going no higher than 4000
+for (var i=12; i<=4000; i+=3)
+    console.log(i)
+
+// B. Get even
+// Print out the numbers that are within the range of 1 - 100
+// Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for (var i=0; i<=100; i++) {
+    if (i % 2 == 0) {
+        console.log(i + "<-- is an even number")
+    }
+}
+
+// C. Give me Five
+// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+// Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
+// For numbers divisible by both three and five, be sure your code prints both messages
+const FindingMultiples = () => {
+    for (i = 1; i <= 100; i++) {
+        if (i % 15 == 0){
+            console.log("I found a number. Three is a crowd. I found a number. High five!");
+        } else if (i % 3 == 0){
+            console.log("I found a number. Three is a crowd.");
+        } else if (i % 5 == 0){
+            console.log("I found a number. High five!");
+        } else {
+            console.log(i);
+        }
+    }
+}
+FindingMultiples();
+
+// D. Savings account
+// Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+// Check your work! Your bank_account should have $55 in it.
+
+var bank_account = 0;
+for (let i = 1; i <= 10; i++) {
+    bank_account += i;
+}
+
+console.log(bank_account);
+// You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+// Check your work! Your bank_account should have $10,100 in it.
+var bank_account = 0;
+for (let i = 1; i <= 100; i++) {
+    bank_account += i*2;
+}
+
+console.log(bank_account);
